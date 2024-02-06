@@ -13,5 +13,4 @@ punchEnd = false;
 
 life = 100;
 
-//var i = instance_create_layer(x, y, layer, objEnemy0Collision);
-//i.follow = id;
+hitBox = noone;

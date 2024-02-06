@@ -1,0 +1,1 @@
+if(instance_exists(objPlayer)) draw_text(16, 16, objPlayer.life);

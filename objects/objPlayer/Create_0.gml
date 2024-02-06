@@ -11,3 +11,5 @@ enum statesPlayer {
 
 state = statesPlayer.idle;
 hitBoxCreated = false;
+
+life = 100;
