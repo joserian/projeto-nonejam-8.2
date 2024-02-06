@@ -1,4 +1,4 @@
-if(keyboard_check_pressed(ord("="))) {
+if(keyboard_check_pressed(vk_insert)) {
 	resPos++;
 	if(resPos >= resLen) {
 		resPos = 0;

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objHitBoxPlayer",
+  "name": "objPlayerHitBox",
   "spriteId": {
     "name": "sprHitBoxPlayer",
     "path": "sprites/sprHitBoxPlayer/sprHitBoxPlayer.yy",

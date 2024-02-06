@@ -15,7 +15,7 @@
     {"id":{"name":"sprPlayerRun","path":"sprites/sprPlayerRun/sprPlayerRun.yy",},"order":2,},
     {"id":{"name":"objEnemy0","path":"objects/objEnemy0/objEnemy0.yy",},"order":9,},
     {"id":{"name":"sprCodeItem","path":"sprites/sprCodeItem/sprCodeItem.yy",},"order":6,},
-    {"id":{"name":"objHitBoxPlayer","path":"objects/objHitBoxPlayer/objHitBoxPlayer.yy",},"order":10,},
+    {"id":{"name":"objPlayerHitBox","path":"objects/objPlayerHitBox/objPlayerHitBox.yy",},"order":10,},
     {"id":{"name":"objGrid","path":"objects/objGrid/objGrid.yy",},"order":11,},
     {"id":{"name":"sprPlayerPunch","path":"sprites/sprPlayerPunch/sprPlayerPunch.yy",},"order":1,},
     {"id":{"name":"sprPlayerIdle","path":"sprites/sprPlayerIdle/sprPlayerIdle.yy",},"order":0,},

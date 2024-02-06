@@ -10,12 +10,14 @@ function window_resize(_width, _height) {
 	
 	view_xport[0] = 0;
 	view_yport[0] = 0;
+	
 	camera_set_view_size(view_camera[0], 256, 144);
 	
 	if(window_get_width() != global.windowWidth or window_get_height() != global.windowHeight) {
 		window_set_size(global.windowWidth, global.windowHeight);
 		surface_resize(application_surface, global.windowWidth, global.windowHeight);
 	}
+	
 }
 
 global.windowHeight = -1;
