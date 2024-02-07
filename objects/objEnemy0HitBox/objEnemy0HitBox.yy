@@ -7,7 +7,7 @@
     "path": "sprites/sprEnemy0HitBox/sprEnemy0HitBox.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,

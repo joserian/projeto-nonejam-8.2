@@ -22,6 +22,6 @@ function window_resize(_width, _height) {
 
 global.windowHeight = -1;
 global.windowWidth = -1;
-window_resize(1024, 576);
+window_resize(1280,720);
 
 

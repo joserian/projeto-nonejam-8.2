@@ -5,7 +5,7 @@ if(keyboard_check_released(vk_enter)) {
 		break;
 		
 		case "spawnenemy0":
-		global.spawnEnemy0 = true;
+		global.spawnEnemy0 = !global.spawnEnemy0;
 		break;
 	}
 	

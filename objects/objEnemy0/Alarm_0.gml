@@ -1,5 +1,5 @@
 if(!instance_place(x, y, objPlayer)) {
-	state = enemyStates.run;
+	state = "run";
 }else {
 	image_index = 0;
 }

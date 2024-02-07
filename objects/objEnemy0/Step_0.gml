@@ -1,16 +1,24 @@
 
 
+if(instance_exists(objPlayer)) {
+	var _dir = point_direction(x, y, objPlayer.x, objPlayer.y);
+	if(_dir >= 90 and _dir <= 270) {
+		image_xscale = 1;
+	}else {
+		image_xscale = -1;
+	}
+}
 
 switch(state) {
-	case enemyStates.idle:
+	case "idle":
 	sprite_index = sprEnemy0Idle;
 	if(instance_exists(objPlayer) and point_distance(x, y, objPlayer.x, objPlayer.y) <= 150) {
-		state = enemyStates.run;
+		state = "run";
 	}
 	
 	break;
 	
-	case enemyStates.run:
+	case "run":
 	sprite_index = sprEnemy0Run;
 	
 	if(instance_exists(objPlayer)) {
@@ -18,29 +26,29 @@ switch(state) {
 		
 		
 		if(point_distance(x, y, objPlayer.x, objPlayer.y) >= 150) {
-			state = enemyStates.idle;
+			state = "idle";
 		}
 		
-		if(mp_grid_path(objGrid.mpGrid, path, x, y, objPlayer.x, objPlayer.y, true)) {
-			path_start(path, spd, path_action_stop, false);
+		//if(mp_grid_path(objGrid.mpGrid, path, x, y, objPlayer.x, objPlayer.y, true)) {
+		//	path_start(path, spd, path_action_stop, false);
 
-		}
-		//mp_potential_step(objPlayer.x, objPlayer.y, spd, objWall)
+		//}
+		mp_potential_step(objPlayer.x, objPlayer.y, spd, true)
 		//mp_potential_path_object(path, objPlayer.x, objPlayer.y,spd, 4, objWall);
 		//path_start(path, spd, path_action_stop, false);
 		
-		if(instance_place(x, y, objPlayer)) {
-			state = enemyStates.punch;
+		if(instance_place(x+lengthdir_x(spd, _dir), y, objPlayer)) {
+			state = "punch";
 			image_index = 0;
 			path_speed = 0;
 			speed = 0;
 		}
 	}else {
-		state = enemyStates.idle;
+		state = "idle";
 	}
 	break;
 	
-	case enemyStates.punch:
+	case "punch":
 	if(hitBox == noone and image_index >= 3 and sprite_index == sprEnemy0Punch) {
 		
 		hitBox = instance_create_layer(x, y-sprite_height/2, layer, objEnemy0HitBox);
@@ -65,14 +73,6 @@ switch(state) {
 	break;
 }
 
-if(instance_exists(objPlayer)) {
-	var _dir = point_direction(x, y, objPlayer.x, objPlayer.y);
-	if(_dir >= 90 and _dir <= 270) {
-		image_xscale = 1;
-	}else {
-		image_xscale = -1;
-	}
-}
 
 if(life <= 0) {
 	instance_destroy();

@@ -1,16 +1,12 @@
 path = path_add();
 spd = .5;
 
-enum enemyStates {
-	idle,
-	run,
-	punch
-}
-state = enemyStates.idle;
-
+state = "idle";
 
 punchEnd = false;
 
 life = 100;
 
 hitBox = noone;
+
+timeHitFlash = 0;

@@ -2,11 +2,7 @@ life = 100;
 path = path_add();
 spd = .4;
 
-enum enemyStates1 {
-	idle,
-	move_away,
-	shot
-}
-
-state = enemyStates.idle;
+state = "idle";
 cooldownShot = 0;
+
+timeHitFlash = 0;

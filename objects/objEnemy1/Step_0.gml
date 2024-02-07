@@ -14,23 +14,23 @@ _y = lengthdir_y(6, _dir-180);
 cooldownShot--;
 
 switch(state) {
-	case enemyStates1.idle:
+	case "idle":
 	sprite_index = sprEnemy1Idle;
 	
 	if(instance_exists(objPlayer) and point_distance(x, y, objPlayer.x, objPlayer.y) <= 50 and !place_meeting(x+_x, y+_y, objWall)) {
-		state = enemyStates1.move_away;
+		state = "move_away";
 	}
 	
 	if(instance_exists(objPlayer) and point_distance(x, y, objPlayer.x, objPlayer.y) <= 200 and cooldownShot <= 0) {
-		state = enemyStates1.shot;
+		state = "shot";
 		image_index = 0;
 	}
 	
 	break;
 	
-	case enemyStates1.move_away:
+	case "move_away":
 	if(cooldownShot <= 0) {
-		state = enemyStates1.shot;
+		state = "shot";
 		image_index = 0;
 	}
 	sprite_index = sprEnemy1Run;
@@ -40,12 +40,12 @@ switch(state) {
 			path_start(path, spd, path_action_stop, false);
 		}
 	}else {
-		state = enemyStates1.idle;
+		state = "idle";
 	}
 	
 	break;
 	
-	case enemyStates1.shot:
+	case "shot":
 	sprite_index = sprEnemy1Shot;
 	
 	if(image_index >= image_number-1) {
@@ -56,7 +56,7 @@ switch(state) {
 		i.image_angle = _dir;
 		var s = instance_create_layer(_x, _y, layer, objEnemy1Smoke);
 		s.image_xscale = image_xscale;
-		state = enemyStates1.idle;
+		state = "idle";
 		cooldownShot = game_get_speed(gamespeed_fps) * 3;
 	}
 	
