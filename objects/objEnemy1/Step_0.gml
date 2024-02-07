@@ -54,7 +54,7 @@ switch(state) {
 		var i = instance_create_layer(_x, _y, layer, objEnemy1Bullet);
 		i.direction = _dir;
 		i.image_angle = _dir;
-		var s = instance_create_layer(_x, _y, layer, objEnemy1Smoke);
+		var s = instance_create_layer(_x, _y, "Effects", objEnemy1Smoke);
 		s.image_xscale = image_xscale;
 		state = "idle";
 		cooldownShot = game_get_speed(gamespeed_fps) * 3;

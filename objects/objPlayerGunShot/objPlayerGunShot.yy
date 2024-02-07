@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objCodeItem",
+  "name": "objPlayerGunShot",
   "spriteId": {
-    "name": "sprCodeItem",
-    "path": "sprites/sprCodeItem/sprCodeItem.yy",
+    "name": "sprPlayerGunBullet",
+    "path": "sprites/sprPlayerGunBullet/sprPlayerGunBullet.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,14 +25,14 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"objPlayer","path":"objects/objPlayer/objPlayer.yy",},},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":7,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "World",
-    "path": "folders/Objects/World.yy",
+    "name": "Entities",
+    "path": "folders/Objects/Entities.yy",
   },
 }
