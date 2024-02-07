@@ -16,7 +16,7 @@ if(instance_exists(objPlayer)) {
 				with(_list[|i]) {
 					if(object_index == objEnemy1 or object_index == objEnemy0) {
 						life -= 50;
-						timeHitFlash = 10;
+						timeHitFlash = 3;
 					}
 				}
 			}

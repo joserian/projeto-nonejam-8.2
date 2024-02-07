@@ -1,7 +1,7 @@
 var _x1, _y1, _x2, _y2, _sep;
 _sep = 4;
-_x1 = device_mouse_x_to_gui(0);
-_y1 = device_mouse_y_to_gui(0);
+_x1 = 0;
+_y1 = display_get_gui_height()-24;
 _x2 = _x1 + 300;
 _y2 = _y1 + 24;
 

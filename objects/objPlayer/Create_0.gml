@@ -34,3 +34,5 @@ cooldownShot = 0;
 #macro attack1_hold (mouse_check_button(mb_right) xor keyboard_check(ord("L")))
 attack0Handle = statesPlayer.punch;
 attack1Handle = statesPlayer.punch;
+
+timeHitFlash = 0;

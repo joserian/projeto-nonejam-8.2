@@ -5,6 +5,7 @@
   "resources": [
     {"id":{"name":"objPlayerGunShot","path":"objects/objPlayerGunShot/objPlayerGunShot.yy",},"order":5,},
     {"id":{"name":"sprPlayerHitBox","path":"sprites/sprPlayerHitBox/sprPlayerHitBox.yy",},"order":12,},
+    {"id":{"name":"fnt1","path":"fonts/fnt1/fnt1.yy",},"order":1,},
     {"id":{"name":"objEnemy0HitBox","path":"objects/objEnemy0HitBox/objEnemy0HitBox.yy",},"order":12,},
     {"id":{"name":"objCode","path":"objects/objCode/objCode.yy",},"order":4,},
     {"id":{"name":"objNext","path":"objects/objNext/objNext.yy",},"order":2,},
