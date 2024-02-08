@@ -54,6 +54,16 @@ if(!global.textMode) {
 		}
 	}
 	
+	if(eletricMode) {
+		velh = 0;
+		velv = 0;
+		
+		instance_create_layer(x, y, layer, objEletricExplosion);
+		image_index = 0;
+		state = statesPlayer.eletric;
+		eletricMode = false;
+	}
+	
 	if(attack0 and state != attack0Handle) {
 		state = attack0Handle;
 	
@@ -85,6 +95,7 @@ switch(state) {
 		state = statesPlayer.idle;
 		velh = 0;
 		velv = 0;
+		
 	}
 	
 	break;
@@ -133,6 +144,15 @@ switch(state) {
 	}
 	
 	if(!attack0_hold or !gunMode) {
+		state = statesPlayer.idle;
+	}
+	
+	break;
+	
+	case statesPlayer.eletric:
+	sprite_index = sprPlayerEletric;
+	
+	if(image_index >= image_number-1) {
 		state = statesPlayer.idle;
 	}
 	

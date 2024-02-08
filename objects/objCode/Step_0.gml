@@ -19,7 +19,7 @@ if(keyboard_check_released(vk_enter) and global.textMode) {
 		if(instance_exists(objPlayer)) objPlayer.gunMode = true;
 		break;
 		
-		case "life":
+		case "invincible":
 		if(instance_exists(objPlayer)) {
 			with(objPlayer) {
 				invincibleMode = true;
@@ -27,6 +27,14 @@ if(keyboard_check_released(vk_enter) and global.textMode) {
 			}
 		}
 		
+		break;
+		
+		case "create_zap":
+		if(instance_exists(objPlayer)) {
+			with(objPlayer) {
+				eletricMode = true;
+			}
+		}
 		break;
 	}
 	
