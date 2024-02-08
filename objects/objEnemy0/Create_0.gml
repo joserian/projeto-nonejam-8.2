@@ -1,12 +1,7 @@
-path = path_add();
-spd = .5;
+event_inherited();
 
-state = "idle";
+path = path_add();
 
 punchEnd = false;
 
-life = 100;
-
 hitBox = noone;
-
-timeHitFlash = 0;

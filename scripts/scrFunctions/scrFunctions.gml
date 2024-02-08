@@ -25,3 +25,8 @@ global.windowWidth = -1;
 window_resize(1024,576);
 
 
+function screen_shake(_duration, _force) {
+	var i = instance_create_layer(0, 0, "Effects", objScreenShake);
+	i.time = _duration;
+	i.force = _force;
+}

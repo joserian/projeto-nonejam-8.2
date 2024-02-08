@@ -1,8 +1,6 @@
-life = 100;
+event_inherited();
+
 path = path_add();
 spd = .4;
 
-state = "idle";
 cooldownShot = 0;
-
-timeHitFlash = 0;

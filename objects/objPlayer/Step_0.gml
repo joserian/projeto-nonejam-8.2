@@ -1,3 +1,4 @@
+
 var _right, _left, _up, _down;
 
 _right = keyboard_check(ord("D"));
@@ -112,6 +113,9 @@ switch(state) {
 		i.direction = image_xscale == 1 ? 0 : 180;
 		var s = instance_create_layer(_x, _y, "Effects", objEnemy1Smoke);
 		s.image_xscale = -image_xscale;
+		
+		screen_shake(10, .2);
+		
 		cooldownShot = 10;
 	}
 	

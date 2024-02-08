@@ -6,7 +6,6 @@ if(_dir >= 90 and _dir <= 270) {
 	image_xscale = -1;
 }
 
-
 var _x, _y;
 _x = lengthdir_x(6, _dir-180);
 _y = lengthdir_y(6, _dir-180);

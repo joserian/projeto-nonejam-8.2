@@ -18,7 +18,16 @@ if(keyboard_check_released(vk_enter)) {
 		}
 	}
 	
-	instance_destroy();
 }
 
-textCode = keyboard_string;
+if((keyboard_check_pressed(ord("E")) and global.textMode == false) or (keyboard_check_pressed(vk_escape) and global.textMode)) {
+	if(global.textMode) {
+		global.textMode = false;
+		textSaved = textCode;
+	}else {
+		global.textMode = true;
+		keyboard_string = textSaved;
+	}
+}
+
+if(global.textMode) textCode = keyboard_string;

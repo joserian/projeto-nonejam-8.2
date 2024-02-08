@@ -1,12 +1,9 @@
+var _dir = instance_exists(objPlayer) ? point_direction(x, y, objPlayer.x, objPlayer.y) : direction;
 
-
-if(instance_exists(objPlayer)) {
-	var _dir = point_direction(x, y, objPlayer.x, objPlayer.y);
-	if(_dir >= 90 and _dir <= 270) {
-		image_xscale = 1;
-	}else {
-		image_xscale = -1;
-	}
+if(_dir >= 90 and _dir <= 270) {
+	image_xscale = 1;
+}else {
+	image_xscale = -1;
 }
 
 switch(state) {
@@ -33,7 +30,7 @@ switch(state) {
 		//	path_start(path, spd, path_action_stop, false);
 
 		//}
-		mp_potential_step(objPlayer.x, objPlayer.y, spd, true)
+		mp_potential_step(objPlayer.x, objPlayer.y, spd, true);
 		//mp_potential_path_object(path, objPlayer.x, objPlayer.y,spd, 4, objWall);
 		//path_start(path, spd, path_action_stop, false);
 		
