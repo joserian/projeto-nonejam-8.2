@@ -42,14 +42,46 @@ switch(state) {
 	case "attack":
 	sprite_index = sprEnemy3Attack;
 	
+	if(hitBox == noone and image_index >= 6) {
+		hitBox = instance_create_layer(x, y, layer, objEnemy3HitBox);
+		hitBox.image_xscale = image_xscale;
+	}
+	
+	if(image_index == 6) screen_shake(10, 1);
+	
 	if(image_index >= (image_number)) {
+		if(instance_exists(hitBox)) {
+			instance_destroy(hitBox);
+		}
+		hitBox = noone;
+		
+		attackCount--;
+		
+		if(attackCount <= 0) {
+			state = "sleep";
+			
+			alarm[0] = game_get_speed(gamespeed_fps)*3;
+			break;
+		}
+		
 		if(instance_place(x+lengthdir_x(spd, _dir), y+lengthdir_y(spd, _dir), objPlayer)) {
 			state = "attack";
 			image_index = 4;
 			
 		}else {
 			state = "idle";
+			
 		}
 	}
 	break;
+	
+	case "sleep":
+	sprite_index = sprEnemy3Idle;
+	
+	
+	break;
+}
+
+if(life <= 0) {
+	instance_destroy();
 }

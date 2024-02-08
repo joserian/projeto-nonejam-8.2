@@ -1,20 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objEnemy0HitBox",
+  "name": "objPlayerDead",
   "spriteId": {
-    "name": "sprEnemy0HitBox",
-    "path": "sprites/sprEnemy0HitBox/sprEnemy0HitBox.yy",
+    "name": "sprPlayerDead",
+    "path": "sprites/sprPlayerDead/sprPlayerDead.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "objEnemyHitBox",
-    "path": "objects/objEnemyHitBox/objEnemyHitBox.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -31,7 +28,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Entities",
+    "path": "folders/Objects/Entities.yy",
   },
 }

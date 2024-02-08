@@ -14,7 +14,7 @@ if(instance_exists(objPlayer)) {
 		if(_enemy > 0) {
 			for(var i = 0; i <= ds_list_size(_list); i++) {
 				with(_list[|i]) {
-					life -= 50;
+					life -= 10;
 					timeHitFlash = 3;
 					
 				}

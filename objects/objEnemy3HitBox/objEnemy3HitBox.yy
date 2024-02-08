@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objEnemy0HitBox",
+  "name": "objEnemy3HitBox",
   "spriteId": {
-    "name": "sprEnemy0HitBox",
-    "path": "sprites/sprEnemy0HitBox/sprEnemy0HitBox.yy",
+    "name": "sprEnemy3HitBox",
+    "path": "sprites/sprEnemy3HitBox/sprEnemy3HitBox.yy",
   },
   "solid": false,
   "visible": false,
@@ -27,7 +27,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
