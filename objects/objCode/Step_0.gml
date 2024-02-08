@@ -1,9 +1,10 @@
 if(keyboard_check_released(vk_enter) and global.textMode) {
 	switch(textCode) {
 		case "restart":
-		room_restart();
+		game_restart();
 		global.textMode = false;
 		textCode = "";
+		
 		break;
 		
 		/*case "spawn_skeleton0":
@@ -16,6 +17,16 @@ if(keyboard_check_released(vk_enter) and global.textMode) {
 		
 		case "create_gun":
 		if(instance_exists(objPlayer)) objPlayer.gunMode = true;
+		break;
+		
+		case "life":
+		if(instance_exists(objPlayer)) {
+			with(objPlayer) {
+				invincibleMode = true;
+				lifeBeforeInvicible = life;
+			}
+		}
+		
 		break;
 	}
 	

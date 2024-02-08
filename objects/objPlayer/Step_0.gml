@@ -37,7 +37,23 @@ if(!global.textMode) {
 			instance_create_layer(x, y-sprite_height/2, "Effects", objBlink);
 		}
 	}
-
+	
+	if(invincibleMode) {
+		image_blend = c_yellow;
+		life = lifeBeforeInvicible;
+		
+		cooldownInvMode--;
+		
+		if(cooldownInvMode <= 0) {
+			cooldownInvMode = game_get_speed(gamespeed_fps) * 10;
+			invincibleMode = false;
+			image_blend = c_white;
+			life = lifeBeforeInvicible;
+			
+			instance_create_layer(x, y-sprite_height/2, "Effects", objBlink);
+		}
+	}
+	
 	if(attack0 and state != attack0Handle) {
 		state = attack0Handle;
 	

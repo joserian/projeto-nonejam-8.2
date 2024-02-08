@@ -27,6 +27,9 @@ gunMode = false;
 cooldownGunMode = game_get_speed(gamespeed_fps) * 15;
 cooldownShot = 0;
 
+invincibleMode = false;
+lifeBeforeInvicible = 100;
+cooldownInvMode = game_get_speed(gamespeed_fps) * 10;
 
 #macro attack0 (mouse_check_button_pressed(mb_left) or keyboard_check_pressed(ord("K")))
 #macro attack0_hold (mouse_check_button(mb_left) xor keyboard_check(ord("K")))

@@ -22,6 +22,12 @@ if(instance_exists(objPlayer)) {
 		}
 		ds_list_destroy(_list);
 		
+		var _boxItem = instance_place(x, y, objBoxItem);
+		if(_boxItem) {
+			_boxItem.life -= 20; 
+			_boxItem.timeHitFlash = 3;
+		}
+		
 		instance_destroy();
 		
 	}//else {
