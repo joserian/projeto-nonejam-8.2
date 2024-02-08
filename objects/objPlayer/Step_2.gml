@@ -1,3 +1,5 @@
+if(global.textMode) exit;
+
 if(place_meeting(x + velh, y, objWall)) {
 	while(!place_meeting(x + sign(velh), y, objWall)) {
 		x += sign(velh);

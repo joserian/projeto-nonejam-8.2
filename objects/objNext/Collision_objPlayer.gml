@@ -1,1 +1,1 @@
-next_room(Room1);
+next_room(rm1);

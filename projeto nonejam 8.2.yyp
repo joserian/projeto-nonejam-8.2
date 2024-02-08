@@ -30,6 +30,7 @@
     {"id":{"name":"objEnemy0","path":"objects/objEnemy0/objEnemy0.yy",},"order":0,},
     {"id":{"name":"objEnemyEntity","path":"objects/objEnemyEntity/objEnemyEntity.yy",},"order":7,},
     {"id":{"name":"sprEnemy1Shot","path":"sprites/sprEnemy1Shot/sprEnemy1Shot.yy",},"order":15,},
+    {"id":{"name":"rm1","path":"rooms/rm1/rm1.yy",},"order":1,},
     {"id":{"name":"sprCodeItem","path":"sprites/sprCodeItem/sprCodeItem.yy",},"order":6,},
     {"id":{"name":"objPlayerHitBox","path":"objects/objPlayerHitBox/objPlayerHitBox.yy",},"order":10,},
     {"id":{"name":"sprEnemy3Attack","path":"sprites/sprEnemy3Attack/sprEnemy3Attack.yy",},"order":22,},
@@ -40,6 +41,7 @@
     {"id":{"name":"sprPlayerIdle","path":"sprites/sprPlayerIdle/sprPlayerIdle.yy",},"order":0,},
     {"id":{"name":"objEnemy0HitBox","path":"objects/objEnemy0HitBox/objEnemy0HitBox.yy",},"order":17,},
     {"id":{"name":"objPlayer","path":"objects/objPlayer/objPlayer.yy",},"order":1,},
+    {"id":{"name":"objPause","path":"objects/objPause/objPause.yy",},"order":18,},
     {"id":{"name":"sprBack0","path":"sprites/sprBack0/sprBack0.yy",},"order":4,},
     {"id":{"name":"snd0","path":"sounds/snd0/snd0.yy",},"order":0,},
     {"id":{"name":"objControl","path":"objects/objControl/objControl.yy",},"order":7,},
@@ -61,7 +63,7 @@
     {"id":{"name":"objCodeItem","path":"objects/objCodeItem/objCodeItem.yy",},"order":0,},
     {"id":{"name":"fnt0","path":"fonts/fnt0/fnt0.yy",},"order":0,},
     {"id":{"name":"sprNext","path":"sprites/sprNext/sprNext.yy",},"order":11,},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
+    {"id":{"name":"rm0","path":"rooms/rm0/rm0.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Android","path":"options/android/options_android.yy",},
@@ -81,7 +83,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm0","path":"rooms/rm0/rm0.yy",},},
+    {"roomId":{"name":"rm1","path":"rooms/rm1/rm1.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},

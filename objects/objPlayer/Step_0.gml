@@ -1,4 +1,3 @@
-
 var _right, _left, _up, _down;
 
 _right = keyboard_check(ord("D"));
@@ -9,47 +8,45 @@ _down = keyboard_check(ord("S"));
 var _velh, _velv;
 var _spdLerp = .6;
 
-if(_right xor _left or _up xor _down) {
-	var keyDir = point_direction(0, 0, (_right - _left), (_down - _up));
-	_velh = lengthdir_x(spd, keyDir);
-	_velv = lengthdir_y(spd, keyDir);
+if(!global.textMode) {
+	if((_right xor _left or _up xor _down)) {
+		var keyDir = point_direction(0, 0, (_right - _left), (_down - _up));
+		_velh = lengthdir_x(spd, keyDir);
+		_velv = lengthdir_y(spd, keyDir);
 	
-	velh = lerp(velh, _velh, _spdLerp);
-	velv = lerp(velv, _velv, _spdLerp);
-}else {
-	velh = lerp(velh, 0, _spdLerp);
-	velv = lerp(velv, 0, _spdLerp);
-}
-
-if(keyboard_check_pressed(ord("B"))) {
-	gunMode = true;
-}
-
-if(gunMode) {
-	attack0Handle = statesPlayer.shot;
-	
-	sprite.idle = sprPlayerGunIdle;
-	sprite.run = sprPlayerGunRun;
-	
-	cooldownGunMode--;
-	if(cooldownGunMode <= 0) {
-		gunMode = false;
-		cooldownGunMode = game_get_speed(gamespeed_fps) * 15;
-		sprite.idle = sprPlayerIdle;
-		sprite.run = sprPlayerRun;
-		attack0Handle = statesPlayer.punch;
-		instance_create_layer(x, y-sprite_height/2, "Effects", objBlink);
+		velh = lerp(velh, _velh, _spdLerp);
+		velv = lerp(velv, _velv, _spdLerp);
+	}else {
+		velh = lerp(velh, 0, _spdLerp);
+		velv = lerp(velv, 0, _spdLerp);
 	}
-}
 
-if(attack0 and state != attack0Handle) {
-	state = attack0Handle;
+	if(gunMode) {
+		attack0Handle = statesPlayer.shot;
 	
-	image_index = 0;
-}else if(attack1 and state != attack1Handle) {
-	state = attack1Handle;
+		sprite.idle = sprPlayerGunIdle;
+		sprite.run = sprPlayerGunRun;
 	
-	image_index = 0;
+		cooldownGunMode--;
+		if(cooldownGunMode <= 0) {
+			gunMode = false;
+			cooldownGunMode = game_get_speed(gamespeed_fps) * 15;
+			sprite.idle = sprPlayerIdle;
+			sprite.run = sprPlayerRun;
+			attack0Handle = statesPlayer.punch;
+			instance_create_layer(x, y-sprite_height/2, "Effects", objBlink);
+		}
+	}
+
+	if(attack0 and state != attack0Handle) {
+		state = attack0Handle;
+	
+		image_index = 0;
+	}else if(attack1 and state != attack1Handle) {
+		state = attack1Handle;
+	
+		image_index = 0;
+	}
 }
 
 if(velh != 0) image_xscale = sign(velh);

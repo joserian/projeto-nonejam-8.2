@@ -6,7 +6,6 @@ if(_dir >= 90 and _dir <= 270) {
 	image_xscale = -1;
 }
 
-
 switch(state) {
 	case "idle":
 	sprite_index = sprEnemy3Idle;
@@ -19,10 +18,7 @@ switch(state) {
 	
 	case "run":
 	sprite_index = sprEnemy3Run;
-	if(instance_exists(objPlayer)) {
-		if(point_distance(x, y, objPlayer.x, objPlayer.y) >= 200) {
-			state = "idle";
-		}
+	if(instance_exists(objPlayer) and point_distance(x, y, objPlayer.x, objPlayer.y) <= 200) {
 		
 		//if(mp_grid_path(objGrid.mpGrid, path, x, y, objPlayer.x, objPlayer.y, true)) {
 			//path_start(path, spd, path_action_stop, false);
@@ -35,6 +31,8 @@ switch(state) {
 			path_speed = 0;
 			speed = 0;
 		}
+	}else {
+		state = "idle";
 	}
 	
 	break;
@@ -65,7 +63,6 @@ switch(state) {
 		}
 		
 		if(instance_place(x+lengthdir_x(spd, _dir), y+lengthdir_y(spd, _dir), objPlayer)) {
-			state = "attack";
 			image_index = 4;
 			
 		}else {

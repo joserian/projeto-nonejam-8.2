@@ -2,7 +2,7 @@ var _x1, _y1, _x2, _y2, _sep;
 _sep = 4;
 _x1 = 0;
 _y1 = display_get_gui_height()-24;
-_x2 = _x1 + 300;
+_x2 = _x1 + display_get_gui_width()/2;
 _y2 = _y1 + 24;
 
 draw_rectangle(_x1, _y1, _x2, _y2, false);

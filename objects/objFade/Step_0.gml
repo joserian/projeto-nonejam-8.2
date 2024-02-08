@@ -3,7 +3,7 @@ if(state == "fade in") {
 		alpha += spd_al;
 	}else {
 		state = "fade out";
-		room = rm
+		room = rm;
 	}
 }else {
 	if(alpha > 0) {
