@@ -26,7 +26,7 @@ switch(state) {
 		//}
 		mp_potential_step(objPlayer.x, objPlayer.y, spd, true);
 		
-		if(instance_place(x+lengthdir_x(spd, _dir), y+lengthdir_y(spd, _dir), objPlayer)) {
+		if(place_meeting(x+spd*image_xscale*(-1), y, objPlayer)) {
 			state = "attack";
 			image_index = 0;
 			path_speed = 0;
@@ -63,7 +63,7 @@ switch(state) {
 			break;
 		}
 		
-		if(instance_place(x+lengthdir_x(spd, _dir), y+lengthdir_y(spd, _dir), objPlayer)) {
+		if(place_meeting(x+spd*image_xscale*(-1), y, objPlayer)) {
 			image_index = 4;
 			
 		}else {

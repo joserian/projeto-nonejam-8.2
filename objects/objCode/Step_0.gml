@@ -31,9 +31,13 @@ if(keyboard_check_released(vk_enter) and global.textMode) {
 		
 		case "create_zap":
 		if(instance_exists(objPlayer)) {
-			with(objPlayer) {
-				eletricMode = true;
-			}
+			objPlayer.eletricMode = true;
+		}
+		break;
+		
+		case "create_pac":
+		if(instance_exists(objPlayer)) {
+			objPlayer.spawnPac = true;
 		}
 		break;
 	}
@@ -49,6 +53,15 @@ if(keyboard_check_released(vk_enter) and global.textMode) {
 	
 }
 
+if(global.textMode) {
+	textCode = keyboard_string;
+	while(string_width(keyboard_string) >= 441*display_get_gui_width()/1024) {
+		keyboard_string = string_copy(textCode, 0, string_length(textCode)-1);
+		textCode = keyboard_string;
+	}
+}
+
+
 if(((keyboard_check_pressed(ord("E")) or keyboard_check_pressed(vk_escape)) and global.textMode == false) or (keyboard_check_pressed(vk_escape) and global.textMode)) {
 	if(global.textMode) {
 		global.textMode = false;
@@ -59,13 +72,5 @@ if(((keyboard_check_pressed(ord("E")) or keyboard_check_pressed(vk_escape)) and 
 		keyboard_string = textSaved;
 		
 		if(!instance_exists(objPause)) instance_create_layer(0, 0, "Effects", objPause);
-	}
-}
-
-if(global.textMode) {
-	textCode = keyboard_string;
-	while(string_width(keyboard_string) >= 441*display_get_gui_width()/1024) {
-		keyboard_string = string_copy(textCode, 0, string_length(textCode)-1);
-		textCode = keyboard_string;
 	}
 }

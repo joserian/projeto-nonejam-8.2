@@ -34,6 +34,8 @@ cooldownInvMode = game_get_speed(gamespeed_fps) * 10;
 
 eletricMode = false;
 
+spawnPac = false;
+
 #macro attack0 (mouse_check_button_pressed(mb_left) or keyboard_check_pressed(ord("K")))
 #macro attack0_hold (mouse_check_button(mb_left) xor keyboard_check(ord("K")))
 #macro attack1 (mouse_check_button_pressed(mb_right) or keyboard_check_pressed(ord("L")))

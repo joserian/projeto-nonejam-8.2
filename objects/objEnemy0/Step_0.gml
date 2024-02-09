@@ -34,7 +34,7 @@ switch(state) {
 		//mp_potential_path_object(path, objPlayer.x, objPlayer.y,spd, 4, objWall);
 		//path_start(path, spd, path_action_stop, false);
 		
-		if(instance_place(x, y, objPlayer)) {
+		if(place_meeting(x+spd*image_xscale*(-1), y, objPlayer)) {
 			state = "punch";
 			image_index = 0;
 			path_speed = 0;

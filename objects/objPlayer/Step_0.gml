@@ -64,6 +64,11 @@ if(!global.textMode) {
 		eletricMode = false;
 	}
 	
+	if(spawnPac) {
+		instance_create_layer(-32, y-sprite_height/2, layer, objPac);
+		spawnPac = false;
+	}
+	
 	if(attack0 and state != attack0Handle) {
 		state = attack0Handle;
 	
@@ -73,6 +78,9 @@ if(!global.textMode) {
 	
 		image_index = 0;
 	}
+}else {
+	velh = lerp(velh, 0, _spdLerp);
+	velv = lerp(velv, 0, _spdLerp);
 }
 
 if(velh != 0) image_xscale = sign(velh);
@@ -150,6 +158,8 @@ switch(state) {
 	break;
 	
 	case statesPlayer.eletric:
+	velh = 0;
+	velv = 0;
 	sprite_index = sprPlayerEletric;
 	
 	if(image_index >= image_number-1) {

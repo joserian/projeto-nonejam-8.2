@@ -7,10 +7,11 @@ if(pause) {
 	draw_set_color(-1);
 	
 	with(objPlayer) {
-	draw_sprite_ext(sprite_index, image_index, x*display_get_gui_width()/256, y*display_get_gui_height()/144, image_xscale*display_get_gui_width()/256, image_yscale*display_get_gui_height()/144, image_angle, image_blend, image_alpha);
+		draw_sprite_ext(sprite_index, image_index, x*display_get_gui_width()/256, y*display_get_gui_height()/144, image_xscale*display_get_gui_width()/256, image_yscale*display_get_gui_height()/144, image_angle, image_blend, image_alpha);
+		
 	}
 	with(objPaper) {
-	draw_sprite_ext(sprite_index, image_index, x*display_get_gui_width()/256, y*display_get_gui_height()/144, image_xscale*display_get_gui_width()/256, image_yscale*display_get_gui_height()/144, image_angle, image_blend, image_alpha);
+		draw_sprite_ext(sprite_index, image_index, x*display_get_gui_width()/256, y*display_get_gui_height()/144, image_xscale*display_get_gui_width()/256, image_yscale*display_get_gui_height()/144, image_angle, image_blend, image_alpha);
 	}
 	
 	
