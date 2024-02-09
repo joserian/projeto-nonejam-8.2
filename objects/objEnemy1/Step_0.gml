@@ -38,6 +38,7 @@ switch(state) {
 		if(mp_grid_path(objGrid.mpGrid, path, x, y, x + _x, y + _y, true)) {
 			path_start(path, spd, path_action_stop, false);
 		}
+		
 	}else {
 		state = "idle";
 	}

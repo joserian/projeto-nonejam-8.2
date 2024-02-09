@@ -12,6 +12,7 @@ switch(state) {
 	
 	if(instance_exists(objPlayer) and point_distance(x, y, objPlayer.x, objPlayer.y) <= 200) {
 		state = "run";
+		
 	}
 	
 	break;
@@ -76,6 +77,17 @@ switch(state) {
 	sprite_index = sprEnemy3Idle;
 	
 	
+	break;
+	
+	case "move_away":
+	sprite_index = sprEnemy3Run;
+	if(instance_exists(objPlayer)) {
+		var _x = x + lengthdir_x(20, point_direction(x, y, objPlayer.x, objPlayer.y)-180);
+		var _y = y + lengthdir_y(20, point_direction(x, y, objPlayer.x, objPlayer.y)-180);
+		mp_potential_step(_x, _y, spd, false);
+	}
+	
+	alarm[1] = 1;
 	break;
 }
 

@@ -5,7 +5,10 @@ if(enemies > 0) {
 		if(instance_exists(listEnemies[|i])) {
 			with(listEnemies[|i]) {
 				state = "idle";
-				life -= 0.5;
+				life -= 0.3;
+				if(object_index = objEnemy3) {
+					state = "move_away";
+				}
 			}
 		}
 	}

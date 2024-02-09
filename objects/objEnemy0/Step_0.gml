@@ -26,11 +26,11 @@ switch(state) {
 			state = "idle";
 		}
 		
-		if(mp_grid_path(objGrid.mpGrid, path, x, y, objPlayer.x, objPlayer.y, true)) {
-			path_start(path, spd, path_action_stop, false);
+		//if(mp_grid_path(objGrid.mpGrid, path, x, y, objPlayer.x, objPlayer.y, true)) {
+			//path_start(path, spd, path_action_stop, false);
 
-		}
-		//mp_potential_step(objPlayer.x, objPlayer.y, spd, true);
+		//}
+		mp_potential_step(objPlayer.x, objPlayer.y, spd, true);
 		//mp_potential_path_object(path, objPlayer.x, objPlayer.y,spd, 4, objWall);
 		//path_start(path, spd, path_action_stop, false);
 		
