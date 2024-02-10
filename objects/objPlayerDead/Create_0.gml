@@ -1,2 +1,2 @@
-global.playerLifes-=3;
+global.playerLifes--;
 alarm[0] = game_get_speed(gamespeed_fps) * 3;

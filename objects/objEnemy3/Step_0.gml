@@ -79,7 +79,7 @@ switch(state) {
 	
 	break;
 	
-	case "move_away":
+	/*case "move_away":
 	sprite_index = sprEnemy3Run;
 	if(instance_exists(objPlayer)) {
 		var _x = x + lengthdir_x(20, point_direction(x, y, objPlayer.x, objPlayer.y)-180);
@@ -88,7 +88,7 @@ switch(state) {
 	}
 	
 	alarm[1] = 1;
-	break;
+	break;*/
 }
 
 if(life <= 0) {

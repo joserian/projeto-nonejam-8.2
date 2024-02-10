@@ -19,5 +19,16 @@ switch(room) {
 	next_room(rm5);
 	break;
 				
+	case rm5:
+	next_room(rm6);
+	break;
+			
+	case rm6:
+	next_room(rm7);
+	
+	case rm7:
+	next_room(rm8);
+	break;
+			
 }
 

@@ -6,10 +6,14 @@ if(enemies > 0) {
 			with(listEnemies[|i]) {
 				state = "idle";
 				life -= 0.3;
-				if(object_index = objEnemy3) {
-					state = "move_away";
-				}
+				timeHitFlash = 3;
 			}
 		}
 	}
+}
+
+var box = instance_place(x, y, objBoxItem);
+if(box) {
+	box.life -= 3;
+	box.timeHitFlash = 3;
 }
