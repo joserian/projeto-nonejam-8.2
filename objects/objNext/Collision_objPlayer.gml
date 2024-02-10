@@ -1,21 +1,21 @@
 switch(room) {
-	case 1:
+	case rm0:
 	next_room(rm1);
 	break;
 			
-	case 2:
+	case rm1:
 	next_room(rm2);
 	break;
 			
-	case 3:
+	case rm2:
 	next_room(rm3);
 	break;
 			
-	case 4:
+	case rm3:
 	next_room(rm4);
 	break;
 	
-	case 5:
+	case rm4:
 	next_room(rm5);
 	break;
 				

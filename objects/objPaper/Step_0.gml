@@ -1,3 +1,5 @@
+
+
 if(state == "in") {
 	if(y != posInY) {
 		y = lerp(y, posInY, .2);
@@ -9,15 +11,33 @@ if(state == "in") {
 	
 	if(position_meeting(mouse_x, mouse_y, id) and mouse_check_button_pressed(mb_left)) {
 		state = "out";
+		playerCall = true;
 	}
 	
+	if(global.textMode) state = "out";
+	
+}else if(state = "out"){
+	if(y != posOutY) {
+		y = lerp(y, posOutY, .2);
+		image_index = global.codesCollected;
+	}
+	
+	if(!global.textMode and (position_meeting(mouse_x, mouse_y, id) and mouse_check_button_pressed(mb_left))) {
+		state = "in";
+		playerCall = false;
+	}
+	
+	if(global.textMode) playerCall = false;
+	
+	if(!global.textMode and !playerCall) state = "in";
 }else {
 	if(y != posOutY) {
 		y = lerp(y, posOutY, .2);
 		image_index = global.codesCollected;
 	}
 	
-	if(position_meeting(mouse_x, mouse_y, id) and mouse_check_button_pressed(mb_left)) {
-		state = "in";
+	if(global.textMode) {
+		state = "out";
+		alarm[0] = -1;
 	}
 }

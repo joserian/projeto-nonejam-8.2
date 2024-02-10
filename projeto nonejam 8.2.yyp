@@ -33,6 +33,7 @@
     {"id":{"name":"sqGameOver","path":"sequences/sqGameOver/sqGameOver.yy",},"order":1,},
     {"id":{"name":"sprEnemy3Idle","path":"sprites/sprEnemy3Idle/sprEnemy3Idle.yy",},"order":21,},
     {"id":{"name":"rmGameOver","path":"rooms/rmGameOver/rmGameOver.yy",},"order":11,},
+    {"id":{"name":"rmTutorial","path":"rooms/rmTutorial/rmTutorial.yy",},"order":12,},
     {"id":{"name":"sprCloud","path":"sprites/sprCloud/sprCloud.yy",},"order":36,},
     {"id":{"name":"objPlayerDead","path":"objects/objPlayerDead/objPlayerDead.yy",},"order":8,},
     {"id":{"name":"objPac","path":"objects/objPac/objPac.yy",},"order":9,},
@@ -48,6 +49,7 @@
     {"id":{"name":"fnt2","path":"fonts/fnt2/fnt2.yy",},"order":2,},
     {"id":{"name":"sprPac","path":"sprites/sprPac/sprPac.yy",},"order":35,},
     {"id":{"name":"sprBackgroundLevel1","path":"sprites/sprBackgroundLevel1/sprBackgroundLevel1.yy",},"order":38,},
+    {"id":{"name":"sqTutorial","path":"sequences/sqTutorial/sqTutorial.yy",},"order":3,},
     {"id":{"name":"objEnemyEntity","path":"objects/objEnemyEntity/objEnemyEntity.yy",},"order":7,},
     {"id":{"name":"sprPlayerEletric","path":"sprites/sprPlayerEletric/sprPlayerEletric.yy",},"order":33,},
     {"id":{"name":"objLifeItem","path":"objects/objLifeItem/objLifeItem.yy",},"order":8,},
@@ -119,8 +121,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"rmIntro","path":"rooms/rmIntro/rmIntro.yy",},},
     {"roomId":{"name":"rm0","path":"rooms/rm0/rm0.yy",},},
+    {"roomId":{"name":"rmIntro","path":"rooms/rmIntro/rmIntro.yy",},},
     {"roomId":{"name":"rmTitle","path":"rooms/rmTitle/rmTitle.yy",},},
     {"roomId":{"name":"rm1","path":"rooms/rm1/rm1.yy",},},
     {"roomId":{"name":"rm2","path":"rooms/rm2/rm2.yy",},},
@@ -131,6 +133,7 @@
     {"roomId":{"name":"rm7","path":"rooms/rm7/rm7.yy",},},
     {"roomId":{"name":"rm8","path":"rooms/rm8/rm8.yy",},},
     {"roomId":{"name":"rmGameOver","path":"rooms/rmGameOver/rmGameOver.yy",},},
+    {"roomId":{"name":"rmTutorial","path":"rooms/rmTutorial/rmTutorial.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},
