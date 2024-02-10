@@ -58,7 +58,7 @@ if(!global.textMode) {
 		velh = 0;
 		velv = 0;
 		
-		instance_create_layer(x, y, layer, objEletricExplosion);
+		instance_create_layer(x, y, "Effects", objEletricExplosion);
 		image_index = 0;
 		state = statesPlayer.eletric;
 		eletricMode = false;
