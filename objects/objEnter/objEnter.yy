@@ -1,11 +1,8 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objLifeItem",
-  "spriteId": {
-    "name": "sprLifeItem",
-    "path": "sprites/sprLifeItem/sprLifeItem.yy",
-  },
+  "name": "objEnter",
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
@@ -25,12 +22,12 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"objPlayer","path":"objects/objPlayer/objPlayer.yy",},},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "World",
-    "path": "folders/Objects/World.yy",
+    "name": "Control",
+    "path": "folders/Objects/Control.yy",
   },
 }

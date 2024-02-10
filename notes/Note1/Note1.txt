@@ -1,0 +1,12 @@
+sistema de profundidade
+nuvem de vida
+fazer o sistema de quando o player morrer se ele ainda tiver outra vida ele renasce, se nao o jg recomeca
+tutorial
+tela de inicio
+
+
+animacoes que falta
+caixa de item
+coracao
+icone de vida do player
+sleep do grandao
