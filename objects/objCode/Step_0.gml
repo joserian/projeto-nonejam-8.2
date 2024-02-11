@@ -17,6 +17,7 @@ if(keyboard_check_released(vk_enter) and global.textMode) {
 		
 		case "create_gun":
 		if(instance_exists(objPlayer)) objPlayer.gunMode = true;
+		play_snd(sndPickup);
 		break;
 		
 		case "invincible":
@@ -26,6 +27,7 @@ if(keyboard_check_released(vk_enter) and global.textMode) {
 				lifeBeforeInvicible = life;
 			}
 		}
+		play_snd(sndPlayerInvincible);
 		
 		break;
 		
@@ -33,6 +35,7 @@ if(keyboard_check_released(vk_enter) and global.textMode) {
 		if(instance_exists(objPlayer)) {
 			objPlayer.eletricMode = true;
 		}
+		play_snd(sndEletricExplosion);
 		break;
 		
 		case "create_pac":
@@ -44,13 +47,10 @@ if(keyboard_check_released(vk_enter) and global.textMode) {
 	
 	keyboard_string = "";
 	
-	if(instance_exists(objPlayer)) {
-		with(objPlayer) {
-			state = statesPlayer.coded;
-			image_index = 0;
-		}
-	}
+	textCode = keyboard_string;
 	
+	global.textMode = false;
+	textSaved = textCode;
 }
 
 if(global.textMode) {

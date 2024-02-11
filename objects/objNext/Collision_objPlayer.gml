@@ -10,7 +10,7 @@ switch(room) {
 	case rm2:
 	next_room(rm3);
 	break;
-			
+	
 	case rm3:
 	next_room(rm4);
 	break;
@@ -25,6 +25,7 @@ switch(room) {
 			
 	case rm6:
 	next_room(rm7);
+	break;
 	
 	case rm7:
 	next_room(rm8);

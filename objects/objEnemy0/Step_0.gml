@@ -49,6 +49,7 @@ switch(state) {
 	if(hitBox == noone and image_index >= 3 and sprite_index == sprEnemy0Punch) {
 		
 		hitBox = instance_create_layer(x, y-sprite_height/2, layer, objEnemy0HitBox);
+		play_snd(sndEnemy3Punch);
 	}else {
 	
 		with(hitBox) {

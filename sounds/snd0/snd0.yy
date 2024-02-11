@@ -17,7 +17,7 @@
   "soundFile": "snd0.ogg",
   "duration": 123.42857,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "SoundTrack",
+    "path": "folders/Sounds/SoundTrack.yy",
   },
 }

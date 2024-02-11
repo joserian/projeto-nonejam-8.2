@@ -9,7 +9,6 @@ enum statesPlayer {
 	idle, 
 	run,
 	punch,
-	coded,
 	shot,
 	eletric
 }
@@ -21,7 +20,7 @@ sprite = {
 	run : sprPlayerRun,
 	punch : sprPlayerPunch,
 	shot : sprPlayerGunShot,
-	buff: sprPlayerGetBuff
+	eletric : sprPlayerEletric
 }
 
 gunMode = false;

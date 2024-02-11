@@ -8,4 +8,5 @@ if(instance_exists(objPaper)) {
 	}
 }
 
+play_snd(sndPickup);
 instance_destroy();

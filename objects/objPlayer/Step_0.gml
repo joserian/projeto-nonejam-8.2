@@ -58,7 +58,7 @@ if(!global.textMode) {
 		velh = 0;
 		velv = 0;
 		
-		instance_create_layer(x, y, "Instances", objEletricExplosion);
+		instance_create_layer(x, y-sprite_height/2, "Instances", objEletricExplosion);
 		image_index = 0;
 		state = statesPlayer.eletric;
 		eletricMode = false;
@@ -105,6 +105,7 @@ switch(state) {
 		velv = 0;
 		
 	}
+	if(!audio_is_playing(sndPlayerFootStep)) audio_play_sound(sndPlayerFootStep, 1.1, 0, 5)
 	
 	break;
 	
@@ -112,6 +113,7 @@ switch(state) {
 	if(!hitBoxCreated) {
 		instance_create_layer(x, y-sprite_height/2, layer, objPlayerHitBox);
 		hitBoxCreated = true;
+		play_snd(sndPlayerPunch);
 	}
 	
 	velh = 0;
@@ -122,14 +124,6 @@ switch(state) {
 	if(image_index >= image_number-1) {
 		state = statesPlayer.idle;
 		hitBoxCreated = false;
-	}
-	break;
-	
-	case statesPlayer.coded:
-	sprite_index = sprite.buff;
-	
-	if(image_index >= image_number-1) {
-		state = statesPlayer.idle;
 	}
 	break;
 	
@@ -160,7 +154,7 @@ switch(state) {
 	case statesPlayer.eletric:
 	velh = 0;
 	velv = 0;
-	sprite_index = sprPlayerEletric;
+	sprite_index = sprite.eletric;
 	
 	if(image_index >= image_number-1) {
 		state = statesPlayer.idle;
@@ -169,8 +163,6 @@ switch(state) {
 	break;
 	
 }
-
-
 
 if(life <= 0) {
 	instance_destroy();

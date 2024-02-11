@@ -1,2 +1,2 @@
 speed = 1.5;
-enemies = [objEnemy0, objEnemy1];
+audio_play_sound(sndPlayerGunShot, 1, 0);

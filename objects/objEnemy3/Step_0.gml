@@ -46,7 +46,10 @@ switch(state) {
 		hitBox.image_xscale = image_xscale;
 	}
 	
-	if(image_index == 6) screen_shake(10, 1);
+	if(image_index == 6) {
+		screen_shake(10, 1);
+		play_snd(sndEnemy3Punch);
+	}
 	
 	if(image_index >= (image_number)) {
 		if(instance_exists(hitBox)) {

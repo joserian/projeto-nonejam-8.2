@@ -30,3 +30,7 @@ function screen_shake(_duration, _force) {
 	i.time = _duration;
 	i.force = _force;
 }
+
+function play_snd(_audio, _priority = 1) {
+	if(!audio_is_playing(_audio)) audio_play_sound(_audio, _priority, 0);
+}

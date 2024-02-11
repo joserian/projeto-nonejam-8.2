@@ -1,4 +1,4 @@
-text = ["ajshasf hahfakh j sdjfjs djs j fsjfshjfsjhf sjf sjf jsf js jsf jsf jshfjsf jshf jsdf erg ehjrg ehjrg hjer gjer ghjadsf ws", "judff asfia dsfjkwf", "jsnk ker ge rg erg kjads fkjwf kjrg kjr gkejrg keg ejrg"];
+text = ["Bem vindo jogador", "voce foi convidado a testar o mais novo jogo em nosso arcade", "por favor, siga as regras do jogo, e nao utilize de cheats pra adquirir vantagens", "bom jogo :)"];
 textCount = 0;
 textCopy = "";
 textIndex = 0;
