@@ -9,7 +9,7 @@ if(state == "in") {
 		image_index = 0;
 	}
 	
-	if(position_meeting(mouse_x, mouse_y, id) and mouse_check_button_pressed(mb_left)) {
+	if(keyboard_check_pressed(vk_space) or (position_meeting(mouse_x, mouse_y, id) and mouse_check_button_pressed(mb_left))) {
 		state = "out";
 		playerCall = true;
 	}
@@ -22,7 +22,7 @@ if(state == "in") {
 		image_index = global.codesCollected;
 	}
 	
-	if(!global.textMode and (position_meeting(mouse_x, mouse_y, id) and mouse_check_button_pressed(mb_left))) {
+	if(!global.textMode and (keyboard_check_pressed(vk_space) or (position_meeting(mouse_x, mouse_y, id) and mouse_check_button_pressed(mb_left)))) {
 		state = "in";
 		playerCall = false;
 	}

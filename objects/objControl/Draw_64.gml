@@ -16,7 +16,11 @@ if(instance_exists(objPlayer)) {
 	
 }
 
-draw_set_font(fnt0);
-draw_text(_x1, _y2+16, global.playerLifes);
+//draw_set_font(fnt0);
+//draw_text(_x1, _y2+32, global.playerLifes);
+for(var i = 0; i < global.playerLifes; i++) {
+	draw_sprite_ext(sprLifeItem, 0, _x1+16 + i*sprite_get_width(sprLifeItem)*2, _y2+32, 2,2, 0, c_white, 1)
+}
+
 	
-draw_set_font(-1);
+//draw_set_font(-1);

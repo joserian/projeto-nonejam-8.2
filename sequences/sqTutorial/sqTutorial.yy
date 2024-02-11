@@ -22,7 +22,7 @@
   },
   "tracks": [
     {"resourceType":"GMTextTrack","resourceVersion":"1.0","name":"Text Track 5","keyframes":{"Keyframes":[
-          {"id":"c36b9ac4-b916-4a4a-baf5-27ffa1832d8d","Key":0.0,"Length":121.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Text":"AWSD: ANDAR\r\nK ou L: ATACAR\r\nESC: PAUSAR","Wrap":true,"Alignment":0,"Id":{"name":"fnt1","path":"fonts/fnt1/fnt1.yy",},"resourceVersion":"1.0","resourceType":"AssetTextKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<AssetTextKeyframe>",},
+          {"id":"c36b9ac4-b916-4a4a-baf5-27ffa1832d8d","Key":0.0,"Length":121.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Text":"AWSD: ANDAR\r\nK ou L: ATACAR\r\nESC: ABRIR TERMINAL","Wrap":true,"Alignment":0,"Id":{"name":"fnt1","path":"fonts/fnt1/fnt1.yy",},"resourceVersion":"1.0","resourceType":"AssetTextKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<AssetTextKeyframe>",},
         ],"resourceVersion":"1.0","resourceType":"KeyframeStore<AssetTextKeyframe>",},"trackColour":4282970785,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[
         {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"frameSize","keyframes":{"Keyframes":[
               {"id":"4385bb84-f6d1-4aac-a049-e54a4d671165","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"EmbeddedAnimCurve":null,"RealValue":213.33333,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},"1":{"EmbeddedAnimCurve":null,"RealValue":91.28206,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<RealKeyframe>",},

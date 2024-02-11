@@ -1,7 +1,8 @@
 sistema de profundidade
+efeitos sonoros]
+fazer com que o player so passe de fase apos matar todos os inimigos
 
 animacoes que falta
 caixa de item
 coracao
 icone de vida do player
-sleep do grandao
