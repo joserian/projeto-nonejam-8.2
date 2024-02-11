@@ -1,7 +1,11 @@
 function next_room(_rm) {
-	var f = instance_create_layer(0, 0, "Instances", objFade);
-	f.rm = _rm;
-	return f;
+	if(!instance_exists(objFade)) {
+		var f = instance_create_layer(0, 0, "Instances", objFade);
+		f.rm = _rm;
+		return f;
+	}else {
+		return false;
+	}
 }
 
 function window_resize(_width, _height) {
@@ -22,7 +26,7 @@ function window_resize(_width, _height) {
 
 global.windowHeight = -1;
 global.windowWidth = -1;
-window_resize(1024,576);
+window_resize(1280,720);
 
 
 function screen_shake(_duration, _force) {
