@@ -1,5 +1,6 @@
 if(global.playerLifes > 0) {
 	instance_create_layer(x, y, layer, objPlayer);
+	play_snd(sndPlayerRevive);
 	instance_destroy();
 }else {
 	next_room(rmGameOver);

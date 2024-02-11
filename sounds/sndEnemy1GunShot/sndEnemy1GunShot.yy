@@ -1,10 +1,10 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snd0",
+  "name": "sndEnemy1GunShot",
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.35,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -14,10 +14,10 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd0.ogg",
-  "duration": 123.42857,
+  "soundFile": "sndEnemy1GunShot.wav",
+  "duration": 0.378095,
   "parent": {
-    "name": "SoundTrack",
-    "path": "folders/Sounds/SoundTrack.yy",
+    "name": "SoundEffects",
+    "path": "folders/Sounds/SoundEffects.yy",
   },
 }

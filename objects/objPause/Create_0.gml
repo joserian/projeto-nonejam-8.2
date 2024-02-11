@@ -25,3 +25,5 @@ instance_activate_object(objCode);
 instance_activate_object(objPlayer);
 instance_activate_object(objPaper);
 instance_activate_object(objControl);
+
+play_snd(sndMenu);

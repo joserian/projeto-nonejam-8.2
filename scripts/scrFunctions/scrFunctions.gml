@@ -1,7 +1,7 @@
 function next_room(_rm) {
 	var f = instance_create_layer(0, 0, "Instances", objFade);
 	f.rm = _rm;
-	
+	return f;
 }
 
 function window_resize(_width, _height) {

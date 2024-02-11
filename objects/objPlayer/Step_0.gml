@@ -35,6 +35,7 @@ if(!global.textMode) {
 			sprite.run = sprPlayerRun;
 			attack0Handle = statesPlayer.punch;
 			instance_create_layer(x, y-sprite_height/2, "Effects", objBlink);
+			play_snd(sndLostPowerUp);
 		}
 	}
 	
@@ -51,6 +52,7 @@ if(!global.textMode) {
 			life = lifeBeforeInvicible;
 			
 			instance_create_layer(x, y-sprite_height/2, "Effects", objBlink);
+			play_snd(sndLostPowerUp);
 		}
 	}
 	
@@ -105,7 +107,7 @@ switch(state) {
 		velv = 0;
 		
 	}
-	if(!audio_is_playing(sndPlayerFootStep)) audio_play_sound(sndPlayerFootStep, 1.1, 0, 5)
+	if(!audio_is_playing(sndPlayerFootStep)) audio_play_sound(sndPlayerFootStep, .6, 0, .5)
 	
 	break;
 	

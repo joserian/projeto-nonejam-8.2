@@ -1,10 +1,10 @@
 draw_set_font(fnt0);
 
 if(textCount < string_length(text[textIndex])) {
-	textCount = !keyboard_check_pressed(vk_enter) and !keyboard_check_pressed(vk_space) ? textCount+.7 : string_length(text[textIndex]);
+	textCount = !keyboard_check_pressed(vk_enter) and !keyboard_check_pressed(vk_space) and !mouse_check_button_pressed(mb_left) ? textCount+.7 : string_length(text[textIndex]);
 	textCopy = string_copy(text[textIndex], 0, textCount);
 }else {
-	if(keyboard_check_pressed(vk_enter) or keyboard_check_pressed(vk_space)) {
+	if(keyboard_check_pressed(vk_enter) or keyboard_check_pressed(vk_space) or mouse_check_button_pressed(mb_left)) {
 		if(textIndex < array_length(text)-1) {
 			textIndex++;
 			textCount = 0;
